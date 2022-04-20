@@ -49,3 +49,23 @@ p {
     font-size: 24px;
     margin-top: 0;
 }
+table {
+    width: 100%;
+    border-collapse:collapse;
+    margin: 20px;
+  }
+  
+  td {
+    width: 33.3%;
+    border: 6px solid black;
+  }
+  
+  td:after {
+    content: "";
+    display: block;
+    margin-top: 100%;
+  }
+
+  td {
+    border: 6px solid black;
+  }
