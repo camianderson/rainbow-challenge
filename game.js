@@ -3,7 +3,7 @@
 class Game{
     constructor(){
         // A way to keep track of the data for the game board
-        this.board = {top1: "", top2: "", top3: "", mid1: "",mid2: "",mid3:  "" , bottom1: "", bottom2: "", bottom3: ""};
+        this.board = {top1: null, top2: null, top3: null, mid1: null, mid2: null, mid3:  null, bottom1: null, bottom2: null, bottom3: null};
         // Two Player instances
         this.p1 = new Player("Player 1", "🌈");
         this.p2 = new Player("Player 2", "🦄");
@@ -17,9 +17,19 @@ class Game{
     }
     // A way to reset the Game’s board to begin a new game
     resetTheGame(){
-        this.board = {top1: "", top2: "", top3: "", mid1: "",mid2: "",mid3:  "" , bottom1: "", bottom2: "", bottom3: ""};
+        this.board = {top1: null, top2: null, top3: null, mid1: null, mid2: null, mid3:  null, bottom1: null, bottom2: null, bottom3: null};
         reDrawSite();
+        playerTurn.innerText = `${game.turn.token} WON!!` 
     }
+
+    checkIfIsADraw(){
+        if(this.board["top1"]!== null && this.board["top2"]!== null && this.board["top3"]!== null && this.board["mid1"]!== null && this.board["mid2"]!== null && this.board["mid3"]!== null && this.board["bottom1"]!== null && this.board["bottom2"]!== null && this.board["bottom3"]!== null){
+            this.board = {top1: null, top2: null, top3: null, mid1: null, mid2: null, mid3:  null, bottom1: null, bottom2: null, bottom3: null};
+        reDrawSite();
+        playerTurn.innerText = `It is a DRAW!` 
+        }
+    }
+
     // A way to check the Game’s board data for win conditions
     winConditions(){
         if(this.board.top1 === this.p1.token && this.board.top2 === this.p1.token && this.board.top3 === this.p1.token){
@@ -102,13 +112,7 @@ class Game{
             this.hasWinner = true;
             this.winner = this.p2;
             this.resetTheGame();
-        // A way to detect when a game is a draw (no one has won)
-        } else if (this.board['top1'] != "" && this.board['top2'] != "" && this.board['top3'] != "" && this.board['mid1'] != "" && this.board['mid2'] != "" && this.board['mid3'] != ""  && this.board['bottom1'] != "" && this.board['bottom2'] != "" && this.board['bottom3'] != ""){
-            this.p1.draw ++;
-            this.p2.draw ++;
-            this.tie = true;
-            this.resetTheGame();
-        }
+        } 
     }
     changePlayers(){
         if (this.turn === this.p1){
@@ -118,82 +122,82 @@ class Game{
         }
     }
     addTop1(){
-        if(this.turn === this.p1 && this.board['top1'] === ""){
+        if(this.turn === this.p1 && this.board['top1'] === null){
             this.board['top1'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['top1'] === ""){
+        } else if (this.board['top1'] === null){
             this.board['top1'] = this.p2.token;
             this.changePlayers();
         }
     }
     addTop2(){
-        if(this.turn === this.p1 && this.board['top2'] === ""){
+        if(this.turn === this.p1 && this.board['top2'] === null){
             this.board['top2'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['top2'] === ""){
+        } else if (this.board['top2'] === null){
             this.board['top2'] = this.p2.token;
             this.changePlayers();
         }
     }
     addTop3(){
-        if(this.turn === this.p1 && this.board['top3'] === ""){
+        if(this.turn === this.p1 && this.board['top3'] === null){
             this.board['top3'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['top3'] === ""){
+        } else if (this.board['top3'] === null){
             this.board['top3'] = this.p2.token;
             this.changePlayers();
         }
     }
     addMid1(){
-        if(this.turn === this.p1 && this.board['mid1'] === ""){
+        if(this.turn === this.p1 && this.board['mid1'] === null){
             this.board['mid1'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['mid1'] === ""){
+        } else if (this.board['mid1'] === null){
             this.board['mid1'] = this.p2.token;
             this.changePlayers();
         }
     }
     addMid2(){
-        if(this.turn === this.p1 && this.board['mid2'] === ""){
+        if(this.turn === this.p1 && this.board['mid2'] === null){
             this.board['mid2'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['mid2'] === ""){
+        } else if (this.board['mid2'] === null){
             this.board['mid2'] = this.p2.token;
             this.changePlayers();
         }
     }
     addMid3(){
-        if(this.turn === this.p1 && this.board['mid3'] === ""){
+        if(this.turn === this.p1 && this.board['mid3'] === null){
             this.board['mid3'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['mid3'] === ""){
+        } else if (this.board['mid3'] === null){
             this.board['mid3'] = this.p2.token;
             this.changePlayers();
         }
     }
     addBottom1(){
-        if(this.turn === this.p1 && this.board['bottom1'] === ""){
+        if(this.turn === this.p1 && this.board['bottom1'] === null){
             this.board['bottom1'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['bottom1'] === ""){
+        } else if (this.board['bottom1'] === null){
             this.board['bottom1'] = this.p2.token;
             this.changePlayers();
         }
     }
     addBottom2(){
-        if(this.turn === this.p1 && this.board['bottom2'] === ""){
+        if(this.turn === this.p1 && this.board['bottom2'] === null){
             this.board['bottom2'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['bottom2'] === ""){
+        } else if (this.board['bottom2'] === null){
             this.board['bottom2'] = this.p2.token;
             this.changePlayers();
         }
     }
     addBottom3(){
-        if(this.turn === this.p1 && this.board['bottom3'] === ""){
+        if(this.turn === this.p1 && this.board['bottom3'] === null){
             this.board['bottom3'] = this.p1.token;
             this.changePlayers();
-        } else if (this.board['bottom3'] === ""){
+        } else if (this.board['bottom3'] === null){
             this.board['bottom3'] = this.p2.token;
             this.changePlayers();
         }

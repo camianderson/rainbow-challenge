@@ -22,38 +22,47 @@ function displayToken(event){
         game.addTop1();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "top2"){
         game.addTop2();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "top3"){
         game.addTop3();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "mid1"){
         game.addMid1();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "mid2"){
         game.addMid2();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "mid3"){
         game.addMid3();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "bottom1"){
         game.addBottom1();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "bottom2"){
         game.addBottom2();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     } else if (event.target.id === "bottom3"){
         game.addBottom3();
         reDrawSite();
         game.winConditions();
+        game.checkIfIsADraw();
     }
     
 }
