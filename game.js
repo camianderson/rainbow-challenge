@@ -18,15 +18,16 @@ class Game{
     // A way to reset the Game’s board to begin a new game
     resetTheGame(){
         this.board = {top1: null, top2: null, top3: null, mid1: null, mid2: null, mid3:  null, bottom1: null, bottom2: null, bottom3: null};
-        reDrawSite();
+        // reDrawSite();
         playerTurn.innerText = `${game.turn.token} WON!!` 
+        window.setTimeout(reDrawSite, 2500);
     }
 
     checkIfIsADraw(){
         if(this.board["top1"]!== null && this.board["top2"]!== null && this.board["top3"]!== null && this.board["mid1"]!== null && this.board["mid2"]!== null && this.board["mid3"]!== null && this.board["bottom1"]!== null && this.board["bottom2"]!== null && this.board["bottom3"]!== null){
             this.board = {top1: null, top2: null, top3: null, mid1: null, mid2: null, mid3:  null, bottom1: null, bottom2: null, bottom3: null};
-        reDrawSite();
         playerTurn.innerText = `It is a DRAW!` 
+        window.setTimeout(reDrawSite, 2500);
         }
     }
 
