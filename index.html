@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Tic Tac Toe</title>
+  <title>Rainbow Challenge</title>
 </head>
 <body>
-  <main>
-    <div class="player-1">
-        <h1>🌈</h1>
-            <p class="player1-win-count" id="player1WinCount"></p>
-    </div>
-    <section>
-        <h2 id="playerTurn">It's player turn</h2>
-        <div class="game-table">
+  <header>Welcome to the Rainbow Challenge!</header>
+  <section>
+    <article class="player-1">
+      <p class="player-title">🌈<p>
+      <p class="player1-win-count" id="player1WinCount"></p>
+    </article>
+    <article class="game-area">
+        <p id="playerTurn">It's player turn</p>
         <table>
           <tr>
             <td class="top1" id="top1"></td>
@@ -25,7 +25,7 @@
           <tr>
             <td class="mid1" id="mid1"></td>
             <td class="mid2" id="mid2"></td>
-            <td class="mid3" id="mid3"</td>
+            <td class="mid3" id="mid3"></td>
           </tr>
           <tr>
             <td class="bottom1" id="bottom1"></td>
@@ -33,13 +33,12 @@
             <td class="bottom3" id="bottom3"></td>
           </tr>
         </table>
-      </div>
-    </section>
-    <div class= "player-2">
-        <h3>🦄</h3>
-            <p class="player2-win-count" id="player2WinCount"></p>
-    </div>
-  </main>
+    </article>
+    <article class= "player-2">
+        <p class="player-title">🦄</p>
+        <p class="player2-win-count" id="player2WinCount"></p>
+    </article>
+  </section>
   <script src="./player.js"></script>
   <script src="./game.js"></script>
   <script src="./main.js"></script>
