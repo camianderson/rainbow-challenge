@@ -1,4 +1,4 @@
-@font-face {  
+@font-face {
     font-family: hearts;
     src: url('./assets/Hearts.ttf') format('truetype');
 }
@@ -33,6 +33,7 @@ p {
     font-family: 'hearts';
     color: #F25278;
 }
+
 .player-2, .player-1 {
     width: 25%;
     height: 100%;
@@ -62,7 +63,7 @@ td {
     text-align: center;
     border: 6px solid #FC94AF;
 }
-  
+
 td::after {
     content: '';
     display: block;
