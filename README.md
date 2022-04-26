@@ -6,6 +6,7 @@ by [Cami Anderson](https://github.com/camianderson).
   - [Technologies](#technologies)
   - [Features](#features)
   - [Illustrations](#illustrations)
+  - [Deployed Page](#deployed-page)
   - [Possible Future Extensions](#possible-future-extensions)
   - [Set Up](#set-up)
   - [Organizational Resources](#organizational-resources)
@@ -41,6 +42,9 @@ by [Cami Anderson](https://github.com/camianderson).
 https://user-images.githubusercontent.com/98124157/165319557-b5b28534-ccb7-482d-8c1a-6e3575bf4171.mp4
 
 
+## Deployed Page
+
+Visit the published Rainbow Challenge page [here](https://camianderson.github.io/tic-tac-toe/)
 
 
 ## Possible Future Extensions
