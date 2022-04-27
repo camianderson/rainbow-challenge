@@ -47,12 +47,12 @@ class Game {
             this.winner = this.p1;
             this.resetTheGame();
         } else if(this.board.top2 === this.p1.token && this.board.mid2 === this.p1.token && this.board.bottom2 === this.p1.token){
-            this.p2.increaseWins();
-            this.winner = this.p2;
+            this.p1.increaseWins();
+            this.winner = this.p1;
             this.resetTheGame();
         } else if(this.board.top3 === this.p1.token && this.board.mid3 === this.p1.token && this.board.bottom3 === this.p1.token){
-            this.p2.increaseWins();
-            this.winner = this.p2;
+            this.p1.increaseWins();
+            this.winner = this.p1;
             this.resetTheGame();
         } else if(this.board.top1 === this.p2.token && this.board.top2 === this.p2.token && this.board.top3 === this.p2.token){
             this.p2.increaseWins();
