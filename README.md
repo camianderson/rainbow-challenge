@@ -44,7 +44,7 @@ https://user-images.githubusercontent.com/98124157/165319557-b5b28534-ccb7-482d-
 
 ## Deployed Page
 
-Visit the published Rainbow Challenge page [here](https://camianderson.github.io/tic-tac-toe/)
+Visit the published Rainbow Challenge page [here](https://camianderson.github.io/rainbow-challenge/)
 
 
 ## Possible Future Extensions
